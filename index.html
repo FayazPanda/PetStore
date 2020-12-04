@@ -5,6 +5,45 @@
     <title>Title</title>
 </head>
 <body>
-
+<h1>Find Pet</h1>
+<form>
+    <input type="number" min="1" name="petID" value="5" required><br>
+    <button class="btn btn-success" onclick="getData()">Get Pet</button>
+</form>
+<form>
+    <select name="status">
+        <option value="available">Available</option>
+        <option value="pending">Pending</option>
+        <option value="sold">Sold</option>
+    </select>
+    <button class="btn btn-success" onclick="getData()"> Get Pet</button>
+</form>
+<h1>Update Pet</h1>
+<form>
+    <input type="number" min="1" name="petID" value="5" required><br>
+    <input type="text" min="1" name="name" value="5" required><br>
+    <select name="status">
+        <option value="available">Available</option>
+        <option value="pending">Pending</option>
+        <option value="sold">Sold</option>
+    </select><br>
+    <button class="btn btn-success" onclick="getData()"> Update Pet</button>
+</form>
+<h1>Delete Pet</h1>
+<form>
+    <input type="number" min="1" name="petID" value="5" required><br>
+    <button class="btn btn-success" onclick="getData()">Delete Pet</button>
+</form>
+<h1>Add Pet</h1>
+<form>
+    <input type="number" min="1" name="petID" value="5" required><br>
+    <input type="text" min="1" name="name" value="5" required><br>
+    <select name="status">
+        <option value="available">Available</option>
+        <option value="pending">Pending</option>
+        <option value="sold">Sold</option>
+    </select><br>
+    <button class="btn btn-success" onclick="getData()">Post Pet</button>
+</form>
 </body>
 </html>
