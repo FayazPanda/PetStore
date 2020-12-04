@@ -1,60 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-</head>
-<body>
-<h1>Find Pet</h1>
-<form>
-    <input type="number" min="1" name="petID" value="5" required><br>
-    <button class="btn btn-success" onclick="getData()">Get Pet</button>
-</form>
-<form>
-    <select name="status">
-        <option value="available">Available</option>
-        <option value="pending">Pending</option>
-        <option value="sold">Sold</option>
-    </select>
-    <button class="btn btn-success" onclick="getData()"> Get Pet</button>
-</form>
-<h1>Update Pet</h1>
-<!-- <form> -->
-    <input type="number" min="1" name="petIDPut" id="petIDPut" placeholder="ID" required><br>
-    <input type="text" min="1" name="petNamePut" id="petNamePut" placeholder="Pet Name"><br>
-    <input type="text" min="1" name="categoryNamePut" id="categoryNamePut" placeholder="Category Name"><br>
-    <input type="text" min="1" name="tagNamePut" id="tagNamePut" placeholder="Tag Name"><br>
-    <select name="statusPut" id="statusPut">
-        <option value="available">Available</option>
-        <option value="pending">Pending</option>
-        <option value="sold">Sold</option>
-    </select><br>
-    <button class="btn btn-success" onclick="updateData()"> Update Pet</button>
-<!-- </form> -->
-<h1>Delete Pet</h1>
-<form>
-    <input type="number" min="1" name="petID" value="5" required><br>
-    <button class="btn btn-success" onclick="getData()">Delete Pet</button>
-</form>
-<div>
-    <h1>Add Pet</h1>
-    <form>
-        <label for="petIDPOST">Pet ID</label>
-        <input type="number" min="1" name="petIDPOST" id="petIDPOST" placeholder="1 - 999" required><br>
-        <label for="petNamePOST">Pet Name</label>
-        <input type="text" min="1" name="petNamePOST" id="petNamePOST" placeholder="Rex the Dog" required><br>
-        <label for="petStatusPOST">Pet Status</label>
-        <select name="petStatusPOST" id="petStatusPOST">
-            <option value="available">Available</option>
-            <option value="pending">Pending</option>
-            <option value="sold">Sold</option>
-        </select><br>
-    </form>
-    <button class="btn btn-success" id="POSTPetBtn">Add New Pet</button>
-</div>
 
-<script src="js/put.js"></script>
-<script src="js/postPet.js"></script>
-<script src="js/delete.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/test.css">
+</head>
+
+<body>
+    <div class="container">
+        <br>
+
+        <!-- ############# NAVBAR #############-->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark" id="petNav">
+            <a class="navbar-brand" href="#">QA PetStore</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <br>
+
+        <!-- ############# FIND PET FORM #############-->
+        <h1>Find Pet</h1>
+        <form>
+            <div class="form-group">
+                <input type="number" min="1" name="petID" value="5" required class="form-control">
+            </div>
+            <button class="btn btn-success" onclick="getData()">Get Pet</button>
+        </form>
+        <br>
+        <form>
+            <div class="form-group">
+                <select class="form-control" name="status">
+                    <option value="available">Available</option>
+                    <option value="pending">Pending</option>
+                    <option value="sold">Sold</option>
+                </select>
+            </div>
+            <button class="btn btn-success" onclick="getData()"> Get Pet</button>
+        </form>
+
+        <br>
+
+        <!-- ############# UPDATE PET FORM #############-->
+        <h1>Update Pet</h1>
+
+        <form>
+            <div class="form-group">
+                <input class="form-control" type="number" min="1" name="petIDPut" id="petIDPut" placeholder="ID"
+                    required><br>
+                <input class="form-control" type="text" min="1" name="petNamePut" id="petNamePut"
+                    placeholder="Pet Name"><br>
+                <input class="form-control" type="text" min="1" name="categoryNamePut" id="categoryNamePut"
+                    placeholder="Category Name"><br>
+                <input class="form-control" type="text" min="1" name="tagNamePut" id="tagNamePut"
+                    placeholder="Tag Name"><br>
+                <select class="form-control" name="statusPut" id="statusPut">
+                    <option value="available">Available</option>
+                    <option value="pending">Pending</option>
+                    <option value="sold">Sold</option>
+                </select>
+            </div>
+            <button class="btn btn-success" onclick="updateData()"> Update Pet</button>
+        </form>
+
+        <br>
+        <!-- ############# DELETE PET FORM #############-->
+        <h1>Delete Pet</h1>
+
+        <form>
+            <div class="form-group">
+                <input class="form-control" type="number" min="1" name="petID" value="5" required><br>
+                <button class="btn btn-success" onclick="getData()">Delete Pet</button>
+            </div>
+        </form>
+
+        <!-- ############# ADD PET FORM #############-->
+        <div>
+            <h1>Add Pet</h1>
+            <form>
+                <div class="form-group">
+                <label for="petIDPOST">Pet ID</label>
+                <input class="form-control" type="number" min="1" name="petIDPOST" id="petIDPOST" placeholder="1 - 999" required><br>
+                <label for="petNamePOST">Pet Name</label>
+                <input class="form-control" type="text" min="1" name="petNamePOST" id="petNamePOST" placeholder="Rex the Dog" required><br>
+                <label for="petStatusPOST">Pet Status</label>
+                <select class="form-control" name="petStatusPOST" id="petStatusPOST">
+                    <option value="available">Available</option>
+                    <option value="pending">Pending</option>
+                    <option value="sold">Sold</option>
+                </select>
+            </div>
+            </form>
+            <button class="btn btn-success" id="POSTPetBtn">Add New Pet</button>
+        </div>
+        <br>
+        <br>
+
+    </div>
+
+    <script src="js/put.js"></script>
+    <script src="js/postPet.js"></script>
+    <script src="js/delete.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
