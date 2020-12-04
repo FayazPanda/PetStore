@@ -34,13 +34,15 @@
         <br>
 
         <!-- ############# FIND PET FORM #############-->
-        <h1>Find Pet</h1>
-        <form>
-            <div class="form-group">
-                <input type="number" min="1" name="petID" value="5" required class="form-control">
-            </div>
-            <button class="btn btn-success" onclick="getData()">Get Pet</button>
-        </form>
+        <div>
+            <h1>Find Pet</h1>
+            <form>
+                <input type="number" min="1" name="petID" placeholder="Pet ID" id="getPetID" required><br>
+            </form>
+            <button class="btn btn-success" id="getPetBtn">Get Pet</button>
+        </div>
+        <div id="displayPet">
+        </div>
         <br>
         <form>
             <div class="form-group">
@@ -115,6 +117,7 @@
     <script src="js/put.js"></script>
     <script src="js/postPet.js"></script>
     <script src="js/delete.js"></script>
+    <script src="js/get.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
