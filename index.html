@@ -36,18 +36,24 @@
     <input type="number" min="1" name="petID" value="5" required><br>
     <button class="btn btn-success" onclick="getData()">Delete Pet</button>
 </form>
-<h1>Add Pet</h1>
-<form>
-    <input type="number" min="1" name="petID" value="5" required><br>
-    <input type="text" min="1" name="name" value="5" required><br>
-    <select name="status">
-        <option value="available">Available</option>
-        <option value="pending">Pending</option>
-        <option value="sold">Sold</option>
-    </select><br>
-    <button class="btn btn-success" onclick="getData()">Post Pet</button>
-</form>
+<div>
+    <h1>Add Pet</h1>
+    <form>
+        <label for="petIDPOST">Pet ID</label>
+        <input type="number" min="1" name="petIDPOST" id="petIDPOST" placeholder="1 - 999" required><br>
+        <label for="petNamePOST">Pet Name</label>
+        <input type="text" min="1" name="petNamePOST" id="petNamePOST" placeholder="Rex the Dog" required><br>
+        <label for="petStatusPOST">Pet Status</label>
+        <select name="petStatusPOST" id="petStatusPOST">
+            <option value="available">Available</option>
+            <option value="pending">Pending</option>
+            <option value="sold">Sold</option>
+        </select><br>
+    </form>
+    <button class="btn btn-success" id="POSTPetBtn">Add New Pet</button>
+</div>
 
 <script src="js/put.js"></script>
+<script src="js/postPet.js"></script>
 </body>
 </html>
