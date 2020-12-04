@@ -19,20 +19,22 @@
     <button class="btn btn-success" onclick="getData()"> Get Pet</button>
 </form>
 <h1>Update Pet</h1>
-<form>
-    <input type="number" min="1" name="petID" value="5" required><br>
-    <input type="text" min="1" name="name" value="5" required><br>
-    <select name="status">
+<!-- <form> -->
+    <input type="number" min="1" name="petIDPut" id="petIDPut" placeholder="ID" required><br>
+    <input type="text" min="1" name="petNamePut" id="petNamePut" placeholder="Pet Name"><br>
+    <input type="text" min="1" name="categoryNamePut" id="categoryNamePut" placeholder="Category Name"><br>
+    <input type="text" min="1" name="tagNamePut" id="tagNamePut" placeholder="Tag Name"><br>
+    <select name="statusPut" id="statusPut">
         <option value="available">Available</option>
         <option value="pending">Pending</option>
         <option value="sold">Sold</option>
     </select><br>
-    <button class="btn btn-success" onclick="getData()"> Update Pet</button>
-</form>
+    <button class="btn btn-success" onclick="updateData()"> Update Pet</button>
+<!-- </form> -->
 <h1>Delete Pet</h1>
 <form>
-    <input type="number" min="1" name="delPetID" value="5" required><br>
-    <button class="btn btn-success" onclick="deletePet()">Delete Pet</button>
+    <input type="number" min="1" name="petID" value="5" required><br>
+    <button class="btn btn-success" onclick="getData()">Delete Pet</button>
 </form>
 <h1>Add Pet</h1>
 <form>
@@ -45,5 +47,7 @@
     </select><br>
     <button class="btn btn-success" onclick="getData()">Post Pet</button>
 </form>
+
+<script src="js/put.js"></script>
 </body>
 </html>
